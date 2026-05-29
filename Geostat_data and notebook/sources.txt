@@ -1,0 +1,38 @@
+EUROPEAN CLIMATE ASSESSMENT & DATASET (ECA&D), file created on 22-01-2024
+THESE DATA CAN BE USED FREELY PROVIDED THAT THE FOLLOWING SOURCE IS ACKNOWLEDGED:
+
+Klein Tank, A.M.G. and Coauthors, 2002. Daily dataset of 20th-century surface
+air temperature and precipitation series for the European Climate Assessment.
+Int. J. of Climatol., 22, 1441-1453.
+Data and metadata available at http://www.ecad.eu
+
+FILE FORMAT (MISSING VALUE CODE IS -9999):
+
+ 01- 05 STAID  : Station identifier
+ 07- 12 SOUID  : Source identifier
+ 14- 53 SOUNAME: Source name
+ 55- 56 CN     : Country code (ISO3116 country codes)
+ 58- 66 LAT    : Latitude in degrees:minutes:seconds (+: North, -: South)
+ 68- 77 LON    : Longitude in degrees:minutes:seconds (+: East, -: West)
+ 79- 82 HGTH   : Station elevation in meters
+ 84- 87 ELEI   : Element identifier (see website at Daily Data > Data dictionary > Elements)
+ 89- 96 BEGIN  : Begin date YYYYMMDD
+ 98-105 END    : End date YYYYMMDD
+107-111 PARID  : Participant identifier
+113-163 PARNAME: Participant name
+
+STAID, SOUID,SOUNAME                                 ,CN,      LAT,       LON,HGHT,ELEI,   BEGIN,     END,PARID,PARNAME
+
+ 2156,112283,MIDELT                                  ,MA,+32:40:48,-004:43:48,1508, TX1,19650913,20110122,   47,GSN network                                       
+ 2156,960195,MIDELT                                  ,MA,+32:40:59,-004:44:00,1515, TX7,19820112,20200229,     ,                    
+ 2160,112288,OUARZAZATE                              ,MA,+30:55:48,-006:54:00,1139, TX1,19650913,20110123,   47,GSN network                                       
+ 2160,960265,OUARZAZATE                              ,MA,+30:56:00,-006:54:00,1140, TX7,19820112,20200229,     ,                    
+ 3768,118438,PORT LYAUTEY                            ,MA,+34:17:59,-006:36:00,  12, TX1,19430101,19710531,   50,GHCND                                             
+ 2153,118441,NOUASSEUR                               ,MA,+33:22:12,-007:34:48, 200, TX1,19511001,19630630,   50,GHCND                                             
+ 3769,118444,SIDI SLIMANE                            ,MA,+34:13:59,-006:04:00,  55, TX1,19510913,19630629,   50,GHCND                                             
+ 3772,118453,BEN GUERIR                              ,MA,+32:07:00,-007:52:59, 448, TX1,19511122,19630430,   50,GHCND                                             
+ 7951,147870,TANGIER CITY                            ,MA,+35:46:48,-005:49:12,  86,TX13,19120629,19610629,   57,MEDARE Initiative                                 
+ 2144,147872,TANGIER AIRPORT                         ,MA,+35:43:48,-005:54:00,  19,TX13,19610630,19781230,   57,MEDARE Initiative                                 
+ 2145,147874,AL HOCEIMA                              ,MA,+35:10:48,-003:51:00,  27,TX13,19650427,19781230,   57,MEDARE Initiative                                 
+ 2146,147876,OUJDA                                   ,MA,+34:46:48,-001:55:48, 468,TX13,19100101,19781230,   57,MEDARE Initiative                                 
+ 7952,147878,TETUAN                                  ,MA,+35:34:48,-005:19:48,  10,TX13,19200504,19781230,   57,MEDARE Initiative                                 

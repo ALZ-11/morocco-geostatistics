@@ -1,0 +1,22 @@
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.nb.html
+.Rproj.user
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+Geostat_data and notebook/TX_STAID*.txt
+Geostat_data and notebook/combined_processed_files.csv
+Geostat_data and notebook/final_data.csv
+Geostat_data and notebook/processed_*.txt
+
+.vscode/
+.DS_Store
+Thumbs.db
+
+Geostatistics_AAHI.pdf
+portfolio_engineering_analysis.md

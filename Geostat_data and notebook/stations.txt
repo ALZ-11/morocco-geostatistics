@@ -1,0 +1,30 @@
+EUROPEAN CLIMATE ASSESSMENT & DATASET (ECA&D), file created on 22-01-2024
+THESE DATA CAN BE USED FREELY PROVIDED THAT THE FOLLOWING SOURCE IS ACKNOWLEDGED:
+
+Klein Tank, A.M.G. and Coauthors, 2002. Daily dataset of 20th-century surface
+air temperature and precipitation series for the European Climate Assessment.
+Int. J. of Climatol., 22, 1441-1453.
+Data and metadata available at http://www.ecad.eu
+
+FILE FORMAT (MISSING VALUE CODE IS -9999):
+
+ 01- 05 STAID  : Station identifier
+ 07- 46 STANAME: Station name
+ 48- 49 CN     : Country code (ISO3116 country codes)
+ 51- 59 LAT    : Latitude in degrees:minutes:seconds (+: North, -: South)
+ 61- 70 LON    : Longitude in degrees:minutes:seconds (+: East, -: West)
+ 72- 75 HGTH   : Station elevation in meters
+
+STAID,STANAME                                 ,CN,      LAT,       LON,HGHT
+
+ 2156,MIDELT                                  ,MA,+32:40:48,-004:43:48,1508
+ 2160,OUARZAZATE                              ,MA,+30:55:48,-006:54:00,1139
+ 3768,PORT LYAUTEY                            ,MA,+34:17:59,-006:36:00,  12
+ 2153,NOUASSEUR                               ,MA,+33:22:12,-007:34:48, 200
+ 3769,SIDI SLIMANE                            ,MA,+34:13:59,-006:04:00,  55
+ 3772,BEN GUERIR                              ,MA,+32:07:00,-007:52:59, 448
+ 7951,TANGIER CITY                            ,MA,+35:46:48,-005:49:12,  86
+ 2144,TANGIER AIRPORT                         ,MA,+35:43:48,-005:54:00,  19
+ 2145,AL HOCEIMA                              ,MA,+35:10:48,-003:51:00,  27
+ 2146,OUJDA                                   ,MA,+34:46:48,-001:55:48, 468
+ 7952,TETUAN                                  ,MA,+35:34:48,-005:19:48,  10
