@@ -1,6 +1,6 @@
 ---
 title: "Geostatistcs"
-output: html_notebook
+output: pdf_document
 ---
 
 

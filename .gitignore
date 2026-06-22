@@ -3,20 +3,16 @@
 .Ruserdata
 .Rproj.user/
 *.nb.html
-.Rproj.user
 
 __pycache__/
 *.py[cod]
 *$py.class
 
-Geostat_data and notebook/TX_STAID*.txt
-Geostat_data and notebook/combined_processed_files.csv
-Geostat_data and notebook/final_data.csv
-Geostat_data and notebook/processed_*.txt
+geostat-pipeline/data/raw/TX_STAID*.txt
+geostat-pipeline/data/processed/*.csv
+geostat-pipeline/data/processed/processed_*.txt
+legacy/Geostatistics_AAHI.pdf
 
 .vscode/
 .DS_Store
 Thumbs.db
-
-Geostatistics_AAHI.pdf
-portfolio_engineering_analysis.md
