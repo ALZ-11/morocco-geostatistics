@@ -71,14 +71,18 @@ message("Final Regression-Kriging predictions saved to: data/processed/climatolo
 # ------------------------------------------------------------------------------
 message("compiling comparative maps...")
 
-# Re-acquire GADM national boundary vector
-morocco_spat <- gadm(country = "MAR", level = 0, path = tempdir())
-morocco_sf <- st_as_sf(morocco_spat)
+# Re-acquire GADM national boundary vector and "Western Sahara" for map backing
+morocco_spat <- geodata::gadm(country = "MAR", level = 0, path = tempdir())
+ws_spat <- geodata::gadm(country = "ESH", level = 0, path = tempdir())
+
+# Convert to sf and union them to dissolve the internal border
+morocco_sf <- st_union(st_as_sf(morocco_spat), st_as_sf(ws_spat)) %>%
+    st_as_sf()
 
 temp_scale <- scale_color_viridis_c(
     option = "plasma",
     name = "Temp (°C)",
-    limits = c(10, 42)
+    limits = c(10, 48)
 )
 
 # Map 4.1: Standard Ordinary Kriging Surface (Baseline)

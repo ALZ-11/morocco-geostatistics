@@ -14,17 +14,25 @@ dir.create("data/processed", recursive = TRUE, showWarnings = FALSE)
 # ------------------------------------------------------------------------------
 # Ingest and preprocess Morocco terrain (DEM)
 # ------------------------------------------------------------------------------
-message("downloading and masking GADM borders and high-res DEM...")
+message("downloading and merging GADM borders and high-res DEMs...")
 
-# Re-acquire GADM administrative borders
+# Re-acquire GADM administrative borders for both northern and southern territories
 morocco_spat <- gadm(country = "MAR", level = 0, path = tempdir())
+ws_spat <- gadm(country = "ESH", level = 0, path = tempdir())
 
-# Download the ~1 km (30 arc-second) resolution digital elevation dataset
-dem_raw <- elevation_30s(country = "MAR", path = tempdir())
+# Combine the SpatVectors for cropping and masking
+morocco_unified_spat <- rbind(morocco_spat, ws_spat)
 
-# Crop and mask the raw terrain model to Morocco's borders
-dem_cropped <- crop(dem_raw, morocco_spat)
-dem_masked <- mask(dem_cropped, morocco_spat)
+# Download the 1-km elevation datasets for both regions
+dem_mar <- elevation_30s(country = "MAR", path = tempdir())
+dem_esh <- elevation_30s(country = "ESH", path = tempdir())
+
+# Merge the adjacent elevation rasters into a single continuous terrain model
+dem_raw <- merge(dem_mar, dem_esh)
+
+# Crop and mask the merged raw terrain model to the unified borders
+dem_cropped <- crop(dem_raw, morocco_unified_spat)
+dem_masked <- mask(dem_cropped, morocco_unified_spat)
 
 # ------------------------------------------------------------------------------
 # Spatial quality control (elevation cross-validation)

@@ -17,17 +17,20 @@ message("setting up spatial frameworks and downloading GADM boundaries...")
 
 stations_cleaned <- read_csv("data/processed/stations_cleaned.csv", show_col_types = FALSE)
 
-# Convert tabular coordinates to formal spatial sf point collection (WGS 84 / EPSG:4326)
-# x = longitude, y = latitude
+# Convert tabular coordinates to a formal spatial sf point collection
 stations_sf <- st_as_sf(
     stations_cleaned,
     coords = c("Longitude", "Latitude"),
     crs = 4326
 )
 
-# download Morocco national boundary from GADM (level 0)
+# download both GADM administrative boundaries (level 0)
 morocco_spat <- gadm(country = "MAR", level = 0, path = tempdir())
-morocco_sf <- st_as_sf(morocco_spat)
+ws_spat <- gadm(country = "ESH", level = 0, path = tempdir())
+
+# Convert to sf and union them to dissolve the internal border
+morocco_sf <- st_union(st_as_sf(morocco_spat), st_as_sf(ws_spat)) %>%
+    st_as_sf()
 
 # ------------------------------------------------------------------------------
 # Spatial cartography plot
