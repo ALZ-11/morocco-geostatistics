@@ -2,17 +2,32 @@
 .RData
 .Ruserdata
 .Rproj.user/
+.RDataTmp
+.RUserData
+*.Ruser
 *.nb.html
 
 __pycache__/
 *.py[cod]
 *$py.class
 
-geostat-pipeline/data/raw/TX_STAID*.txt
-geostat-pipeline/data/processed/*.csv
-geostat-pipeline/data/processed/processed_*.txt
-legacy/Geostatistics_AAHI.pdf
+data/raw/TX_STAID*.txt
+data/processed/*.csv
+data/processed/processed_*.txt
+legacy/
+archive/
+scripts/
 
 .vscode/
 .DS_Store
 Thumbs.db
+*.log
+
+create_plot_pdfs.R
+create_review_package.R
+REVIEW_PACKAGE.md
+planning.md
+retained_figures.pdf
+R_console_logs.txt
+console_plots.pdf
+old.RData
