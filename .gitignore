@@ -16,7 +16,6 @@ data/processed/*.csv
 data/processed/processed_*.txt
 legacy/
 archive/
-scripts/
 
 .vscode/
 .DS_Store
